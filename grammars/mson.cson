@@ -97,7 +97,7 @@ repository:
     patterns: [
       {
         name: "keyword"
-        match: "(required|optional|variable|fixed|sample|default)"
+        match: "(required|optional|variable|fixed(-type)?|sample|default|nullable)"
       }
       {
         name: "entity.name.class"

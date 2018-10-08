@@ -35,14 +35,20 @@ patterns: [
   }
   {
     name: "blueprint.response.json"
-    begin: "([-+*]) ([Rr]equest|[Rr]esponse) (\\d+)?(?: (\\(.*\\/+json(?:[ ;\\/]+.*)?\\)))+"
+    begin: "([-+*]) (?:([Rr]equest)|([Rr]esponse)) (?:(\\d+)|([^\\(]+))?(?: (\\(.*\\/+json(?:[ ;\\/]+.*)?\\)))+"
     end: "^(?=\\S)"
     beginCaptures:
       "1":
         name: "variable.unordered.list.gfm"
+      "2":
+        name: "markup.heading.markdown punctuation.definition.heading.bold"
       "3":
-        name: "constant.numeric"
+        name: "markup.italic.markdown"
       "4":
+        name: "constant.numeric"
+      "5":
+        name: "keyword.other"
+      "6":
         name: "variable.language.fenced.markdown"
     patterns: [
       {
