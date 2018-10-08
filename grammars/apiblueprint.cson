@@ -35,7 +35,7 @@ patterns: [
   }
   {
     name: "blueprint.response.json"
-    begin: "([-+*]) (?:([Rr]equest)|([Rr]esponse)) (?:(\\d+)|([^\\(]+))?(?: (\\(.*\\/+json(?:[ ;\\/]+.*)?\\)))+"
+    begin: "([-+*]) (?:([Rr]equest)|([Rr]esponse)) (?:(\\d+)|([^\\(]+))?(?: (\\(.*\\/+([^+]+\\+)?json(?:[ ;\\/]+.*)?\\)))+"
     end: "^(?=\\S)"
     beginCaptures:
       "1":
